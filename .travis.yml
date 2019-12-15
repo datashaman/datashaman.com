@@ -6,11 +6,12 @@ install:
 script:
   - yarn docs:build
 deploy:
-  provider: pages
-  skip_cleanup: true
-  local_dir: docs/.vuepress/dist
   github_token: $GITHUB_TOKEN
   keep_history: true
-  repo: datashaman/datashaman.github.io
+  local_dir: docs/.vuepress/dist
   on:
     branch: master
+  provider: pages
+  repo: datashaman/datashaman.github.io
+  skip_cleanup: true
+  target_branch: master
