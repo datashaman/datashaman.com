@@ -27,18 +27,22 @@
             <div class="e-content">
                 <Content />
             </div>
+
+            <Mentions />
         </div>
         <Toc />
     </div>
 </template>
 
 <script>
+import Mentions from '@theme/components/Mentions.vue'
 import Toc from '@theme/components/Toc.vue'
 import strftime from 'strftime'
 import vagueTime from 'vague-time'
 
 export default {
     components: {
+        Mentions,
         Toc,
     },
     computed: {

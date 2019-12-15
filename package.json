@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "jsonp": "^0.2.1",
     "strftime": "^0.10.0",
     "vague-time": "^2.4.2"
   },
@@ -43,7 +44,6 @@
   "homepage": "https://github.com/datashaman/www.datashaman.com#readme",
   "eslintConfig": {
     "root": true,
-    "extends": [
-    ]
+    "extends": []
   }
 }
