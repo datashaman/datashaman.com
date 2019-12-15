@@ -6,6 +6,7 @@ install:
 script:
   - yarn docs:build
 deploy:
+  committer_from_gh: true
   github_token: $GITHUB_TOKEN
   keep_history: true
   local_dir: docs/.vuepress/dist
