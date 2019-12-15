@@ -11,6 +11,7 @@
 
             <div class="p-note">
                 Freelance developer, open source solutions.
+                <em>Wannabe writer</em>.
             </div>
 
             <a

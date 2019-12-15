@@ -17,13 +17,6 @@ module.exports = {
     [
       'link',
       {
-        rel: 'me',
-        href: 'https://www.linkedin.com/in/datashaman',
-      },
-    ],
-    [
-      'link',
-      {
         rel: 'pingback',
         href: 'https://webmention.io/www.datashaman.com/xmlrpc',
       },
