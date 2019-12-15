@@ -13,6 +13,4 @@ deploy:
   on:
     branch: master
   provider: pages
-  repo: datashaman/datashaman.github.io
   skip_cleanup: true
-  target_branch: master
