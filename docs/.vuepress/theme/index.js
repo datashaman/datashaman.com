@@ -1,3 +1,3 @@
 module.exports = {
-    extend: '@vuepress/blog',
-}
+  extend: "@vuepress/blog"
+};
