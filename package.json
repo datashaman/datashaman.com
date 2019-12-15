@@ -13,7 +13,8 @@
     "commander": "^2.0.0",
     "esm": "^3.0.0",
     "raw-loader": "^4.0.0",
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.2.0",
+    "webpack": "^4.0.0 || ^5.0.0"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

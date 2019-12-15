@@ -25,6 +25,10 @@ module.exports = {
             href: '/datashaman.pgp',
             type: 'application/pgp-keys',
         }],
+        ['link', {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css?family=PT+Serif&display=swap'
+        }],
     ],
     theme: '@vuepress/blog',
     themeConfig: {

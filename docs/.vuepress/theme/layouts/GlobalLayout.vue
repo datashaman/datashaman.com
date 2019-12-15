@@ -43,12 +43,12 @@
 <style lang="stylus">
   .content-wrapper
     padding 160px 15px 80px 15px
-    min-height calc(100vh - 80px - 60px - 160px - 168px - 23px)
+    min-height calc(100vh - 80px - 60px - 160px - 168px - 42px)
     max-width 740px
     margin 0 auto
 
   @media (max-width: $MQMobile)
     .content-wrapper
       padding 100px 15px 20px 15px
-      min-height calc(100vh - 20px - 60px - 100px - 168px - 23px)
+      min-height calc(100vh - 20px - 60px - 100px - 168px - 42px)
 </style>
