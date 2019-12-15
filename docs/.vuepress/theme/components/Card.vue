@@ -7,15 +7,21 @@
 
             <div class="p-note">Freelance developer, open source solutions.</div>
 
-            <a class="u-key" href="/datashaman.pgp" :value="key">public key</a>
+            <a class="u-key" href="/datashaman.pgp" :value="key" title="pgp public key">
+                <KeyIcon/>
+            </a>
         </div>
     </footer>
 </template>
 
 <script>
+import { KeyIcon } from 'vue-feather-icons'
 import key from 'raw-loader!../../public/datashaman.pgp'
 
 export default {
+    components: {
+        KeyIcon,
+    },
     data() {
         return {
             key: key

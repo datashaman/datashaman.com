@@ -52,6 +52,9 @@ module.exports = {
                 }, {
                     type: 'linkedin',
                     link: 'https://www.linkedin.com/in/datashaman',
+                }, {
+                    type: 'codepen',
+                    link: 'https://codepen.io/datashaman',
                 },
             ],
         },
