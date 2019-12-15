@@ -60,6 +60,7 @@ module.exports = {
                 link: '/tags/',
             }
         ],
+        summary: false,
     },
     plugins: [
         ['@vuepress/blog', {
