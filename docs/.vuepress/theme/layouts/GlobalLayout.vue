@@ -3,6 +3,7 @@
     <Header/>
     <MobileHeader :isOpen="isMobileHeaderOpen" @toggle-sidebar="isMobileHeaderOpen = !isMobileHeaderOpen"/>
     <div class="content-wrapper" @click="isMobileHeaderOpen = false">
+      {{ $site }}
       <DefaultGlobalLayout/>
     </div>
     <Card/>

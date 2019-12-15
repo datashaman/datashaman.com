@@ -6,9 +6,23 @@
             </a>
 
             <div class="p-note">Freelance developer, open source solutions.</div>
+
+            <a class="u-key" href="/datashaman.pgp" :value="key">public key</a>
         </div>
     </footer>
 </template>
+
+<script>
+import key from 'raw-loader!../../public/datashaman.pgp'
+
+export default {
+    data() {
+        return {
+            key: key
+        }
+    }
+}
+</script>
 
 <style lang="stylus" scoped>
 .card
