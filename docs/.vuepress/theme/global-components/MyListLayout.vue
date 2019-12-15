@@ -133,7 +133,6 @@ export default {
     margin 0
 
 .ui-post-title
-  font-family PT Serif, Serif
   font-size 28px
   border-bottom 0
 
