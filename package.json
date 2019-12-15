@@ -27,7 +27,8 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "lint": "eslint --ext .js,.vue docs/.vuepress/theme",
-    "fix": "eslint --fix --ext .js,.vue docs/.vuepress/theme"
+    "fix": "eslint --fix --ext .js,.vue docs/.vuepress/theme",
+    "pretest": "yarn lint"
   },
   "repository": {
     "type": "git",
