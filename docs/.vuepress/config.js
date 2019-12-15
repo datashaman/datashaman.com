@@ -13,12 +13,12 @@ module.exports = {
             href: 'https://www.linkedin.com/in/datashaman',
         }],
         ['link', {
-            rel: 'webmention',
-            href: 'https://webmention.io/www.datashaman.com/webmention'
-        }],
-        ['link', {
             rel: 'pingback',
             href: 'https://webmention.io/www.datashaman.com/xmlrpc'
+        }],
+        ['link', {
+            rel: 'webmention',
+            href: 'https://webmention.io/www.datashaman.com/webmention'
         }],
     ],
     theme: '@vuepress/blog',
