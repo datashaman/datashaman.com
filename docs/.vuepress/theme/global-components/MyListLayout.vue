@@ -149,8 +149,6 @@ export default {
 .ui-post-summary
   font-size 14px
   margin-bottom 15px
-  color rgba(0, 0, 0, 0.54)
-  font-weight 200
 
 .ui-post-author
   display flex
