@@ -1,16 +1,20 @@
 <template>
     <footer class="card h-card vcard">
-        <a class="u-url url" href="http://www.datashaman.com">
-            <img class="p-name fn u-photo photo" alt="Marlin Forbes" src="/images/headshot.png"/>
-        </a>
+        <div class="center">
+            <a class="u-url url" href="http://www.datashaman.com">
+                <img class="p-name fn u-photo photo" alt="Marlin Forbes" src="/images/headshot.png"/>
+            </a>
+
+            <div class="p-note">Freelance developer, open source solutions.</div>
+        </div>
     </footer>
 </template>
 
 <style lang="stylus" scoped>
 .card
-  display flex
-  justify-content center
   margin-bottom 40px
+.center
+  text-align center
 .photo
   border-radius 50%
 </style>
