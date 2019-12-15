@@ -14,11 +14,16 @@ module.exports = {
         }],
         ['link', {
             rel: 'pingback',
-            href: 'https://webmention.io/www.datashaman.com/xmlrpc'
+            href: 'https://webmention.io/www.datashaman.com/xmlrpc',
         }],
         ['link', {
             rel: 'webmention',
-            href: 'https://webmention.io/www.datashaman.com/webmention'
+            href: 'https://webmention.io/www.datashaman.com/webmention',
+        }],
+        ['link', {
+            rel: 'pgpkey',
+            href: '/datashaman.pgp',
+            type: 'application/pgp-keys',
         }],
     ],
     theme: '@vuepress/blog',
