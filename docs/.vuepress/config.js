@@ -169,5 +169,11 @@ module.exports = {
         canonical_base: 'https://www.datashaman.com',
       },
     ],
+    [
+      'sitemap',
+      {
+        hostname: 'https://www.datashaman.com',
+      },
+    ],
   ],
 }
