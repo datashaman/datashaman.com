@@ -1,7 +1,11 @@
 <template>
     <div v-if="mentions.length" class="mentions">
         <ul>
-            <li v-for="mention in mentions" class="mention u-comment h-cite">
+            <li
+                v-for="mention in mentions"
+                class="mention u-comment h-cite"
+                :key="mention.id"
+            >
                 <div class="u-author pure-g">
                     <div class="pure-u-1-12">
                         <img

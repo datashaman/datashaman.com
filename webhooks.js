@@ -7,37 +7,50 @@ const webhooks = require('datashaman-webhooks')
 const app = express()
 webhooks.boot(app, process.env.GITHUB_SECRET)
 
-app.post('/', webhooks.router(function (req, res, event) {
-  switch (event) {
-    case 'deployment':
-      const deployment = req.body.deployment
-      if (deployment.task == 'deploy' && deployment.environment == 'github-pages') {
-        console.log('received deployment event for ref ' + deployment.ref)
+app.post(
+  '/',
+  webhooks.router(function(req, res, event) {
+    let deployment
 
-        const command = "cd public && git remote update -p && git checkout " + deployment.ref
+    switch (event) {
+      case 'deployment':
+        deployment = req.body.deployment
 
-        exec(command, (error, stdout, stderr) => {
-          if (error) {
-            console.error('webhooks error', error)
-            return
-          }
+        if (
+          deployment.task == 'deploy' &&
+          deployment.environment == 'github-pages'
+        ) {
+          console.log('received deployment event for ref ' + deployment.ref)
 
-          if (stdout) {
-            console.log('webhooks', stdout)
-          }
+          const command =
+            'cd public && git remote update -p && git checkout ' +
+            deployment.ref
 
-          if (stderr) {
-            console.error('webhooks', stderr)
-          }
-        })
+          exec(command, (error, stdout, stderr) => {
+            if (error) {
+              console.error('webhooks error', error)
+              return
+            }
 
-        res.send('OK')
+            if (stdout) {
+              console.log('webhooks', stdout)
+            }
+
+            if (stderr) {
+              console.error('webhooks', stderr)
+            }
+          })
+
+          res.send('OK')
+          return
+        }
         break
-      }
-    default:
-      console.error('Unhandled event: ' + event)
-      res.send('ERR')
-  }
-}))
+      default:
+        console.error('Unhandled event: ' + event)
+    }
+
+    res.send('ERR')
+  })
+)
 
 app.listen(process.env.PORT || 8080)
