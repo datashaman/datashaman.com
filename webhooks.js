@@ -13,20 +13,24 @@ app.post('/', webhooks.router(function (req, res, event) {
       const deployment = req.body.deployment
       if (deployment.task == 'deploy' && deployment.environment == 'github-pages') {
         console.log('received deployment event for ref ' + deployment.ref)
-        exec('cd .. && git pull && git checkout ' + deployment.ref, (error, stdout, stderr) => {
+
+        const command = "cd .. && git remote update -p && git checkout " + deployment.ref
+
+        exec(command, (error, stdout, stderr) => {
           if (error) {
-            console.error(`error: ${error}`)
+            console.error('webhooks error', error)
             return
           }
 
           if (stdout) {
-            console.log(`stdout: ${stdout}`)
+            console.log('webhooks', stdout)
           }
 
           if (stderr) {
-            console.error(`stderr: ${stderr}`)
+            console.error('webhooks', stderr)
           }
         })
+
         res.send('OK')
         break
       }
