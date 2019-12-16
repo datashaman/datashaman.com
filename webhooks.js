@@ -12,7 +12,7 @@ app.post('/', webhooks.router(function (req, res, event) {
     case 'deployment':
       const deployment = req.body.deployment
       if (deployment.task == 'deploy' && deployment.environment == 'github-pages') {
-        exec('cd public && git pull')
+        exec('cd .. && git pull && git checkout ' + deployment.ref)
 	res.send('OK')
 	break
       }
