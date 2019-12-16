@@ -1,8 +1,8 @@
-import express from 'express'
-import webhooks from 'datashaman-webhooks'
+const express = require('express')
+const webhooks = require('datashaman-webhooks')
 
 const app = express()
-webhooks.boot(app, process.env.GITHUB_TOKEN)
+webhooks.boot(app, process.env.GITHUB_SECRET)
 
 app.post('/', webhooks.router(function (req, res, event) {
   switch (event) {
@@ -13,3 +13,5 @@ app.post('/', webhooks.router(function (req, res, event) {
       console.error('Unhandled event: ' + event)
   }
 }))
+
+app.listen(process.env.PORT || 8080)
