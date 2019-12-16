@@ -126,8 +126,8 @@ ol, ul
 .footer
   height 60px
   box-sizing border-box
-  background-color #000
-  color #FFF
+  background-color #fff
+  color #000
   display flex
   padding 15px 32px
 
@@ -145,12 +145,12 @@ ol, ul
 
         a
           font-size 12px
-          color rgba(255, 255, 255, 0.45)
+          color rgba(0, 0, 0, 0.45)
           text-decoration none
           transition color .3s
 
           &:hover
-            color #FFF
+            color #000
 
   .footer-right-wrap
     flex 1
@@ -170,19 +170,19 @@ ol, ul
         padding 0 10px
         position relative
         line-height 12px
-        border-right 1px solid rgba(255, 255, 255, 0.6)
+        border-right 1px solid rgba(0, 0, 0, 0.6)
 
         &:last-child
           border-right none
 
         a
           font-size 12px
-          color rgba(255, 255, 255, 0.6)
+          color rgba(0, 0, 0, 0.6)
           text-decoration none
           transition color .3s
 
           &:hover
-            color rgba(255, 255, 255, 0.9)
+            color rgba(0, 0, 0, 0.9)
 
 @media (max-width: $MQMobile)
   .footer

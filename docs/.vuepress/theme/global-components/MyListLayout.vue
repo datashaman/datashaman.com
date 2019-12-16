@@ -147,6 +147,7 @@ export default {
       text-decoration underline
 
 .ui-post-summary
+  color #666666
   font-size 14px
   margin-bottom 15px
 
