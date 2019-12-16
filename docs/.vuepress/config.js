@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'datashaman',
+  title: 'datashaman TEST',
   description: 'Freelance developer, open source solutions. Wannabe writer.',
   head: [
     [
