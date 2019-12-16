@@ -146,11 +146,6 @@ export default {
     &:hover
       text-decoration underline
 
-.ui-post-summary
-  color #666666
-  font-size 14px
-  margin-bottom 15px
-
 .ui-post-author
   display flex
   align-items center
