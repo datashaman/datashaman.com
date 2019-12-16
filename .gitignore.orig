@@ -1,0 +1,8 @@
+/docs/.vuepress/dist/
+/.env
+/node_modules/
+/priv/
+<<<<<<< HEAD
+=======
+/public/
+>>>>>>> 7be7395e7d84d9aef3b7319273c5c6258c4faa54
