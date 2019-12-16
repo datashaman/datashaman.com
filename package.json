@@ -13,6 +13,7 @@
     "chalk": "^2.0.0",
     "commander": "^2.0.0",
     "datashaman-webhooks": "^0.1.5",
+    "debug": "^2.6.9",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.7.0",
