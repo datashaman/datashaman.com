@@ -1,3 +1,6 @@
+require('dotenv').config()
+
+const exec = require('child_process').exec
 const express = require('express')
 const webhooks = require('datashaman-webhooks')
 
@@ -7,8 +10,12 @@ webhooks.boot(app, process.env.GITHUB_SECRET)
 app.post('/', webhooks.router(function (req, res, event) {
   switch (event) {
     case 'deployment':
-    case 'deployment_status':
-      console.log(req)
+      const deployment = req.body.deployment
+      if (deployment.task == 'deploy' && deployment.environment == 'github-pages') {
+        exec('cd public && git pull')
+	res.send('OK')
+	break
+      }
     default:
       console.error('Unhandled event: ' + event)
   }
