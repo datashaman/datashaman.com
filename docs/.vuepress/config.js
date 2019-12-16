@@ -66,7 +66,7 @@ module.exports = {
       'link',
       {
         rel: 'manifest',
-        href: '/site.manifest',
+        href: '/site.webmanifest',
       },
     ],
     [
