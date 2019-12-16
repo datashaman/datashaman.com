@@ -12,12 +12,27 @@ app.post('/', webhooks.router(function (req, res, event) {
     case 'deployment':
       const deployment = req.body.deployment
       if (deployment.task == 'deploy' && deployment.environment == 'github-pages') {
-        exec('cd .. && git pull && git checkout ' + deployment.ref)
-	res.send('OK')
-	break
+        console.log('received deployment event for ref ' + deployment.ref)
+        exec('cd .. && git pull && git checkout ' + deployment.ref, (error, stdout, stderr) => {
+          if (error) {
+            console.error(`error: ${error}`)
+            return
+          }
+
+          if (stdout) {
+            console.log(`stdout: ${stdout}`)
+          }
+
+          if (stderr) {
+            console.error(`stderr: ${stderr}`)
+          }
+        })
+        res.send('OK')
+        break
       }
     default:
       console.error('Unhandled event: ' + event)
+      res.send('ERR')
   }
 }))
 
