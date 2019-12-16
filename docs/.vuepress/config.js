@@ -1,4 +1,6 @@
 module.exports = {
+  title: 'datashaman',
+  description: 'Freelance developer, open source solutions. Wannabe writer.',
   head: [
     [
       'link',
