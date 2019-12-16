@@ -14,7 +14,7 @@ app.post('/', webhooks.router(function (req, res, event) {
       if (deployment.task == 'deploy' && deployment.environment == 'github-pages') {
         console.log('received deployment event for ref ' + deployment.ref)
 
-        const command = "cd docs/.vuepress/dist && git remote update -p && git checkout " + deployment.ref
+        const command = "cd public && git remote update -p && git checkout " + deployment.ref
 
         exec(command, (error, stdout, stderr) => {
           if (error) {
