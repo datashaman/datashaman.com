@@ -175,7 +175,7 @@ export default {
 
 .metadata
   font-size small
-  color #999
+  color #666
 </style>
 
 <style src="prismjs/themes/prism-okaidia.css"></style>
