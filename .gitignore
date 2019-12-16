@@ -1,2 +1,3 @@
 /docs/.vuepress/dist
+/.env
 /node_modules/
