@@ -29,7 +29,7 @@
                     </span>
                 </h1>
 
-                <div class="p-summary ui-post-summary">
+                <div class="p-summary">
                     {{ page.frontmatter.summary || page.summary }}
                     <!-- <Content :page-key="page.key" slot-key="intro"/>-->
                 </div>
