@@ -161,5 +161,15 @@ module.exports = {
         ],
       },
     ],
+    [
+        'vuepress-plugin-rss',
+        {
+          base_url: '/',
+          site_url: 'https://www.datashaman.com',
+          copyright: '2019 Marlin Forbes',
+          filter: (frontmatter) => { return true },
+          count: 20
+        }
+      ]
   ],
 }
