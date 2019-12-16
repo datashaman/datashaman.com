@@ -29,6 +29,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "clean": "rm -rf docs/.vuepress/dist/*",
     "lint": "eslint --ext .js,.vue docs/.vuepress",
     "fix": "eslint --fix --ext .js,.vue docs/.vuepress",
     "pretest": "yarn lint"

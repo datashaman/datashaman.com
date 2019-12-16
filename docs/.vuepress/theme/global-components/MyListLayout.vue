@@ -21,7 +21,7 @@
                         <a class="u-url" :href="page.path">
                             <time
                                 class="dt-published"
-                                :datetime="published"
+                                :datetime="published(page.frontmatter.date)"
                                 :title="new Date(page.frontmatter.date)"
                                 >{{ vagueTime(page.frontmatter.date) }}</time
                             >
@@ -80,9 +80,6 @@ export default {
         pages() {
             return this.$pagination.pages
         },
-        published: function() {
-            return strftime('%FT%T%z', new Date(this.$page.frontmatter.date))
-        },
     },
 
     methods: {
@@ -97,6 +94,10 @@ export default {
             }
 
             return Vue.component(n) || Pagination
+        },
+
+        published: function(dt) {
+            return strftime('%FT%T%z', new Date(dt))
         },
 
         resovlePostDate(date) {
