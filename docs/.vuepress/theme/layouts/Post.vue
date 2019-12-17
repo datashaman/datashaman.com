@@ -28,7 +28,7 @@
                 <Content />
             </div>
 
-            <ul class="tags" v-if="$page.frontmatter.tags.length">
+            <ul class="tags" v-if="$page.frontmatter.tags">
                 <li class="tag" v-for="tag in $page.frontmatter.tags">
                     <a :href="'/tags/' + tag" :title="tag">#{{ tag }}</a>
                 </li>
