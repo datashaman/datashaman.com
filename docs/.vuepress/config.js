@@ -40,6 +40,20 @@ module.exports = {
     [
       'link',
       {
+        rel: 'authorization_endpoint',
+        href: 'https://micro.blog/indieauth/auth',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'token_endpoint',
+        href: 'https://micro.blog/indieauth/token',
+      },
+    ],
+    [
+      'link',
+      {
         rel: 'pgpkey',
         href: '/datashaman.pgp',
         type: 'application/pgp-keys',
