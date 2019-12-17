@@ -7,9 +7,8 @@
                     v-for="item in contact"
                     :key="item.text"
                 >
-                    <NavLink :link="item.link">
+                    <NavLink :link="item.link" :aria-label="item.text">
                         <component :is="item.iconComponent"></component>
-                        {{ item.text }}
                     </NavLink>
                 </li>
             </ul>
@@ -101,6 +100,7 @@ export default {
                     return {
                         iconComponent: this.getIconComponentName(type),
                         link,
+                        text: type,
                     }
                 })
                 .filter(({iconComponent}) => iconComponent)
