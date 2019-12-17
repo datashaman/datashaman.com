@@ -126,7 +126,7 @@ ol, ul
 .footer
   height 60px
   box-sizing border-box
-  background-color #fff
+  background-color #fffefa
   color #000
   display flex
   padding 15px 32px

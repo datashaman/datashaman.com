@@ -140,7 +140,7 @@ export default {
     margin 0
 
 .ui-post-title
-  font-family PT Serif, Serif
+  // font-family PT Serif, Serif
   font-size 28px
   border-bottom 0
 
@@ -180,8 +180,9 @@ export default {
     height 14px
 
 .metadata
-  font-size small
+  font-size x-small
   color #666
+  text-transform uppercase
 
 .tags
     list-style none

@@ -10,15 +10,17 @@
 html, body
   padding 0
   margin 0
-  background-color #fff
+  background-color #fffefa
 
 body
-  font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  // font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  font-family "garamond-premier-pro", "Cochin", "Baskerville", Palatino, "Times New Roman", serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  font-size 16px
+  font-size 125%
+  line-height 145%
   color $textColor
-  background-color #FFF
+  background-color #fffefa
 
 .page
   padding-left $sidebarWidth
@@ -114,9 +116,9 @@ strong
   font-weight 600
 
 h1, h2, h3, h4, h5, h6
-  font-weight 600
-  line-height 1.25
-  font-family PT Serif
+  // font-weight 600
+  // line-height 1.25
+  // font-family PT Serif
 
   {$contentClass}:not(.custom) > &
     margin-top (0.5rem - $navbarHeight)
