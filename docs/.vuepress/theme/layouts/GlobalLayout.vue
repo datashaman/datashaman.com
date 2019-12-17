@@ -54,4 +54,8 @@ export default {
   .content-wrapper
     padding 100px 15px 20px 15px
     min-height calc(100vh - 20px - 60px - 100px - 168px - 71px)
+
+#app
+  a
+    color #000
 </style>
