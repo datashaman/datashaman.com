@@ -20,7 +20,7 @@ module.exports = {
       'link',
       {
         rel: 'me',
-        href: 'https://micro.blog/datashaman",
+        href: 'https://micro.blog/datashaman',
       },
     ],
     [
