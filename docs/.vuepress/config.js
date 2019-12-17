@@ -147,6 +147,7 @@ module.exports = {
             id: 'post',
             dirname: '_posts',
             path: '/',
+            frontmatter: {title: ''},
             itemLayout: 'Post',
             itemPermalink: '/:year/:month/:day/:slug',
           },

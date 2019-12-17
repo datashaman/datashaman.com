@@ -20,10 +20,6 @@
                 </span>
             </h1>
 
-            <p v-if="$page.frontmatter.summary" class="p-summary">
-                {{ $page.frontmatter.summary }}
-            </p>
-
             <div class="e-content">
                 <Content />
             </div>
