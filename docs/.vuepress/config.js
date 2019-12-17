@@ -19,6 +19,13 @@ module.exports = {
     [
       'link',
       {
+        rel: 'me',
+        href: 'https://micro.blog/datashaman",
+      },
+    ],
+    [
+      'link',
+      {
         rel: 'pingback',
         href: 'https://webmention.io/www.datashaman.com/xmlrpc',
       },
