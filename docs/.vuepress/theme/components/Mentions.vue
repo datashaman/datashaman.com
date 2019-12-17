@@ -59,7 +59,7 @@ export default {
             mentions: [],
         }
     },
-    mounted() {
+    beforeMount() {
         jsonp(
             'https://webmention.io/api/mentions?per-page=50&page=0&target=' +
                 encodeURIComponent(window.location.href),
@@ -70,7 +70,7 @@ export default {
                 if (err) {
                     console.error(err)
                 } else {
-                    this.mentions = data.links
+                    this.$data.mentions = data.links
                 }
             }
         )

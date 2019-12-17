@@ -28,6 +28,12 @@
                 <Content />
             </div>
 
+            <ul class="tags" v-if="$page.frontmatter.tags.length">
+                <li class="tag" v-for="tag in $page.frontmatter.tags">
+                    <a :href="'/tags/' + tag" :title="tag">#{{ tag }}</a>
+                </li>
+            </ul>
+
             <Mentions />
         </div>
         <Toc />
@@ -67,6 +73,12 @@ export default {
 .metadata
     font-size small
     color #666
+.tags
+    list-style none
+    padding 0
+.tag
+    display inline-block
+    margin-right 10px
 </style>
 
 <style src="prismjs/themes/prism-okaidia.css"></style>

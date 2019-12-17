@@ -34,6 +34,12 @@
                     <!-- <Content :page-key="page.key" slot-key="intro"/>-->
                 </div>
 
+                <ul class="tags" v-if="page.frontmatter.tags.length">
+                    <li class="tag" v-for="tag in page.frontmatter.tags">
+                        <a :href="'/tags/' + tag" :title="tag">#{{ tag }}</a>
+                    </li>
+                </ul>
+
                 <div class="ui-post-author" v-if="page.frontmatter.author">
                     <NavigationIcon />
                     <span
@@ -176,6 +182,13 @@ export default {
 .metadata
   font-size small
   color #666
+
+.tags
+    list-style none
+    padding 0
+.tag
+    display inline-block
+    margin-right 10px
 </style>
 
 <style src="prismjs/themes/prism-okaidia.css"></style>
