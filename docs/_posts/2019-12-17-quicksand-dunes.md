@@ -23,6 +23,6 @@ summary: "Wherein I tackle my first improv writing task. Select a topic at rando
 
 <p>Yes, let's shout out loud from the highest point: We have conquered this demon!</p>
 
-<p>Yes, let's sip our carefully carried basket of culinary treasures, savouring the moments with each bite in the setting sun!</p>
+<p>Yes, let's dine on our carefully carried basket of culinary treasures, savouring the moments with each bite in the setting sun!</p>
 
 <p>Yes, let's end our days in the sand and sun heavy with tiredness and dust, carried away by the wind to sleep!</p>
