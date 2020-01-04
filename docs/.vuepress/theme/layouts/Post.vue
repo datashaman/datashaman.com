@@ -2,7 +2,9 @@
     <div id="vuperess-theme-blog__post-layout">
         <div class="h-entry vuepress-blog-theme-content">
             <div class="metadata">
-                <a class="p-author h-card" href="https://www.datashaman.com">datashaman</a>
+                <a class="p-author h-card" href="https://www.datashaman.com"
+                    >datashaman</a
+                >
                 posted
                 <a class="u-url" :href="$page.path">
                     <time
@@ -19,7 +21,11 @@
             </div>
 
             <ul class="tags" v-if="$page.frontmatter.tags">
-                <li class="tag" v-for="tag in $page.frontmatter.tags">
+                <li
+                    class="tag"
+                    v-for="tag in $page.frontmatter.tags"
+                    :key="tag"
+                >
                     <a :href="'/tags/' + tag" :title="tag">#{{ tag }}</a>
                 </li>
             </ul>

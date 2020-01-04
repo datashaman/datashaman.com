@@ -1,8 +1,3 @@
-export default ({
-  Vue,
-  options,
-  router,
-  siteData
-}) => {
+export default () => {
   require('../../../node_modules/purecss/build/pure.css')
 }

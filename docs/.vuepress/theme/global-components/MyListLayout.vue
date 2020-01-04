@@ -35,7 +35,11 @@
                 </div>
 
                 <ul class="tags" v-if="page.frontmatter.tags">
-                    <li class="tag" v-for="tag in page.frontmatter.tags">
+                    <li
+                        class="tag"
+                        v-for="tag in page.frontmatter.tags"
+                        :key="tag"
+                    >
                         <a :href="'/tags/' + tag" :title="tag">#{{ tag }}</a>
                     </li>
                 </ul>
