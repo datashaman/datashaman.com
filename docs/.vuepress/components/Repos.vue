@@ -1,17 +1,17 @@
 <template>
   <ul class="repos">
     <li v-for="repo in repos" :key="repo.id" class="repo">
-      <h2>
-        <a :href="repo.html_url">{{ repo.name }}</a>
+      <h3>
+        <a :href="repo.html_url">{{ repo.full_name }}</a>
         <Icon v-if="repo.fork" name="code-branch"/>
-      </h2>
-
-      <p v-if="repo.description">{{ repo.description }}</p>
+      </h3>
 
       <ul class="meta">
         <li><Icon name="clock"/> Updated {{ vagueTime(new Date(repo.updated_at)) }}</li>
         <li v-if="repo.fork && repo.parent"><Icon name="code-branch"/> Forked from <a :href="repo.parent.url">{{ repo.parent.name }}</a></li>
       </ul>
+
+      <p v-if="repo.description">{{ repo.description }}</p>
     </li>
   </ul>
 </template>
@@ -43,10 +43,20 @@ export default {
 </script>
 
 <style scoped>
+h3 {
+  margin-bottom: 5px;
+}
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+p {
+  margin-top: 5px;
+}
+.meta li {
+  display: inline-block;
+  margin-right: 5px;
 }
 .meta {
   font-size: smaller;

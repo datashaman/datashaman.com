@@ -9,8 +9,9 @@ const octokit = new Octokit({
 })
 
 octokit.repos.list({
-  type: 'owner',
+  affiliation: 'owner,collaborator',
   sort: 'updated',
+  visibility: 'public',
 }).then(({ data }) => {
   const filtered = data.filter((repo) => {
       return !repo.archived
