@@ -4,10 +4,12 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "@octokit/rest": "^16.36.0",
     "dotenv": "^8.2.0",
     "jsonp": "^0.2.1",
     "strftime": "^0.10.0",
     "vague-time": "^2.4.2",
+    "vue-awesome": "^4.0.2",
     "vue-tweet-embed": "^2.4.0"
   },
   "devDependencies": {
