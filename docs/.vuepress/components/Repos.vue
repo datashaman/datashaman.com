@@ -6,15 +6,12 @@
         <Icon v-if="repo.fork" name="code-branch"/>
       </h2>
 
-      {{ repo.parent }}
-      {{ repo.source }}
+      <p v-if="repo.description">{{ repo.description }}</p>
 
       <ul class="meta">
         <li><Icon name="clock"/> Updated {{ vagueTime(new Date(repo.updated_at)) }}</li>
         <li v-if="repo.fork && repo.parent"><Icon name="code-branch"/> Forked from <a :href="repo.parent.url">{{ repo.parent.name }}</a></li>
       </ul>
-
-      <p v-if="repo.description">{{ repo.description }}</p>
     </li>
   </ul>
 </template>
@@ -48,6 +45,8 @@ export default {
 <style scoped>
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .meta {
   font-size: smaller;
