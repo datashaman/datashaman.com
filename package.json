@@ -34,12 +34,13 @@
     "webpack": "^4.0.0 || ^5.0.0"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
     "clean": "rm -rf docs/.vuepress/dist/*",
-    "lint": "eslint --ext .js,.vue docs/.vuepress",
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs",
     "fix": "eslint --fix --ext .js,.vue docs/.vuepress",
-    "pretest": "yarn lint"
+    "lint": "eslint --ext .js,.vue docs/.vuepress",
+    "pretest": "yarn lint",
+    "repos": "scripts/repos.sh > docs/.vuepress/data/repos.json"
   },
   "repository": {
     "type": "git",

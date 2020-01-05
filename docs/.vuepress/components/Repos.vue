@@ -24,30 +24,15 @@ import 'vue-awesome/icons/clock'
 import 'vue-awesome/icons/code-branch'
 import Icon from 'vue-awesome/components/Icon'
 
-import Octokit from '@octokit/rest'
 import vagueTime from 'vague-time'
 
 export default {
   components: {
     Icon,
   },
-  created () {
-    const octokit = new Octokit()
-    octokit.repos
-      .listForUser({
-        sort: 'updated',
-        type: 'owner',
-        username: 'datashaman',
-      })
-      .then(({ data }) => {
-        this.repos = data.filter((repo) => {
-          return !repo.archived
-        })
-      })
-  },
   data () {
     return {
-      repos: [],
+      repos: require('../data/repos.json'),
     }
   },
   methods: {
