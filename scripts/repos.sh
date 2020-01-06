@@ -11,13 +11,16 @@ const octokit = new Octokit({
 
 const blacklist = process.env.GITHUB_BLACKLIST.split(',')
 
-octokit.repos
-    .list({
-        affiliation: 'owner,collaborator',
-        visibility: 'public',
-    })
-    .then(({data}) => {
-        const repos = data.filter(repo => {
+octokit
+    .paginate(
+        'GET /user/repos',
+        {
+            affiliation: 'owner,collaborator',
+            visibility: 'public',
+        }
+    )
+    .then(repos => {
+        repos = repos.filter(repo => {
             return !repo.archived && blacklist.indexOf(repo.full_name) == -1
         })
 
