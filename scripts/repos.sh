@@ -14,7 +14,6 @@ const blacklist = process.env.GITHUB_BLACKLIST.split(',')
 octokit.repos
     .list({
         affiliation: 'owner,collaborator',
-        sort: 'updated',
         visibility: 'public',
     })
     .then(({data}) => {
