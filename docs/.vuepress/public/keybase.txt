@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/datashaman
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.datashaman.com
+  * I am datashaman (https://keybase.io/datashaman) on keybase.
+  * I have a public key with fingerprint FEF0 409F A006 4A12 8508  BD5C 5AE8 6373 A31F 965D
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012056a7507c2900eb47f6dd1787e6e0345075175dc03520ad94918be8f50a16bb2f0a",
+      "fingerprint": "fef0409fa0064a128508bd5c5ae86373a31f965d",
+      "host": "keybase.io",
+      "key_id": "5ae86373a31f965d",
+      "kid": "0101586a8bd964960f0af218315d6d493d6e281c616b28513c3db33ed37b18e381af0a",
+      "uid": "0ac9ec05665b83bdc9721efe81267219",
+      "username": "datashaman"
+    },
+    "service": {
+      "hostname": "www.datashaman.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1578316399,
+  "expire_in": 157680000,
+  "prev": "17dfee2f8d5efd70a32a27094d442eb3b8388f1ef5239e7eee1eb67cc9b93615",
+  "seqno": 36,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owFtUltsFUUYPqfUYqsQWqsYCZCuRkCaOpfd2ZkTiNWQeCEYo40pBDnM7Pzbbtru
+np5dekBs0oiKxaQxqAdEkjYh3trES9QQE2okigFqa8ILpIkXfLE9LzVVIyaIzhYa
+X5yXmfnn+77/+/7Mq8uWZOqyO2a8+MTa8jPZiVmV2XUbKe23VKT3Wbn9VhcsbNCt
+IU7yXYG2chbCBDlMug5yPSIQAmW7PtMau9wFBoja5sXBrqM9RB2CpBa2wFwB9x0k
+MVOK+EhazZYfhB1QLBSDMDGyPvjIRsKXCDFbYsIdxJV2PEcCZ9SlkmJfMEcbYmcU
+pwxjTskYWoLI1Mwlv2Dvf/CLvhF2OJNGVTBbMGRc+ARzih3NtC2oZkA49pixaLpj
+6lGtKAVNXYU5UI7ldd97rstJT4BnJsEcxanSnnAJBh84JsycRAqMoRjKHjBoLRMZ
+d8oeGVr9zZap9wUepKNNs9zAlEqllv9wLV7UYzQKxSiJvKjbvHcmSSHOpfxkX2GB
+ACp/QyqvglCbeRpGHxTjIAqtHDZILwlSbey4JiejQjRbsLcQFCEfhAtlxpFZaR/o
+s3LSwq72AYjPtQO+dpGkRBIXCVvbNgFFTVbOfRPUIVSACwAYFHM9TyhBGXasNF1v
+GFk5yoxR2WF8xkFHKJM9RbD66waztDqTrcusvqOp+tqvrcMjNY81vHjz+M7FT3hT
+VfoDM3W1KxYrk2eWXrv35JO3/3z46unlA8Nt38+iAxfGx6feqH1zXeXsh0O9Z698
+8cm5dx84+c5oac1079SO4w32XwNPPFKpzFXmz9e/1FiVWfXQ5qHeg9M/zqyZG1zy
++tj5D+45VXvqYv22u6a/nPv92XNj61ZufH7r7qb3Rr5d2n7p0M5XvlqbmT/d2jj6
+spwdWb6hPqhZX83jmszu57a/8DY5tnU7wZvqa7NHfhrbe+KXy48fb3lt2eRH67uu
+2p/dPTG4oq38z5ZHf1h96ej8RFlVtR/J3fd+6+TFg1cujH597M/2xuqBpspvh+7c
+tbLhm7cOPLXl46cf/px8d2bz5anyg4fb+obKf2xin/rFv4f9Vd3bbrl/Jslt7N9w
+678=
+=46r9
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/datashaman
+
+==================================================================
