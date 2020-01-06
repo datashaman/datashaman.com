@@ -9,7 +9,7 @@ const octokit = new Octokit({
     auth: process.env.GITHUB_TOKEN,
 })
 
-const blacklist = ['taskrabbit/elasticsearch-dump']
+const blacklist = process.env.GITHUB_BLACKLIST.split(',')
 
 octokit.repos
     .list({
