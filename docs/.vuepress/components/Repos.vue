@@ -1,19 +1,55 @@
 <template>
-  <ul class="repos">
-    <li v-for="repo in repos" :key="repo.id" class="repo">
-      <h3>
-        <a :href="repo.html_url">{{ repo.full_name }}</a>
-        <Icon v-if="repo.fork" name="code-branch"/>
-      </h3>
+  <div class="repos">
+    <h2>Owner</h2>
 
-      <ul class="meta">
-        <li><Icon name="clock"/> Updated {{ vagueTime(new Date(repo.updated_at)) }}</li>
-        <li v-if="repo.fork && repo.parent"><Icon name="code-branch"/> Forked from <a :href="repo.parent.url">{{ repo.parent.name }}</a></li>
-      </ul>
+    <ul>
+        <li v-for="repo in ownerRepos" :key="repo.id" class="repo">
+        <h3>
+            <a :href="repo.html_url">{{ repo.full_name }}</a>
+        </h3>
 
-      <p v-if="repo.description">{{ repo.description }}</p>
-    </li>
-  </ul>
+        <ul class="meta">
+            <li><Icon name="clock"/> Updated {{ vagueTime(new Date(repo.updated_at)) }}</li>
+        </ul>
+
+        <p v-if="repo.description">{{ repo.description }}</p>
+        </li>
+    </ul>
+
+    <h2>Collaborator</h2>
+
+    <ul>
+        <li v-for="repo in collaboratorRepos" :key="repo.id" class="repo">
+        <h3>
+            <a :href="repo.html_url">{{ repo.full_name }}</a>
+        </h3>
+
+        <ul class="meta">
+            <li><Icon name="clock"/> Updated {{ vagueTime(new Date(repo.updated_at)) }}</li>
+        </ul>
+
+        <p v-if="repo.description">{{ repo.description }}</p>
+        </li>
+    </ul>
+
+    <h2>Forked</h2>
+
+    <ul>
+        <li v-for="repo in forkedRepos" :key="repo.id" class="repo">
+        <h3>
+            <a :href="repo.html_url">{{ repo.full_name }}</a>
+        </h3>
+
+        <ul class="meta">
+            <li><Icon name="code-branch"/> Forked from <a :href="repo.parent.url">{{ repo.parent.full_name }}</a></li>
+            <li><Icon name="clock"/> Updated {{ vagueTime(new Date(repo.updated_at)) }}</li>
+        </ul>
+
+        <p v-if="repo.description">{{ repo.description }}</p>
+        </li>
+    </ul>
+
+  </div>
 </template>
 
 <script>
@@ -27,9 +63,28 @@ export default {
   components: {
     Icon,
   },
+  computed: {
+    collaboratorRepos () {
+      return this.repos.filter(repo => {
+        return repo.owner.login !== 'datashaman' && !repo.fork
+      })
+    },
+    forkedRepos () {
+      return this.repos.filter(repo => {
+        return repo.fork
+      })
+    },
+    ownerRepos () {
+      return this.repos.filter(repo => {
+        return repo.owner.login === 'datashaman' && !repo.fork
+      })
+    },
+  },
   data () {
+    const repos = require('../data/repos.json')
+
     return {
-      repos: require('../data/repos.json'),
+      repos: repos,
     }
   },
   methods: {
@@ -53,10 +108,6 @@ ul {
 }
 p {
   margin-top: 5px;
-}
-.meta li {
-  display: inline-block;
-  margin-right: 5px;
 }
 .meta {
   font-size: smaller;
