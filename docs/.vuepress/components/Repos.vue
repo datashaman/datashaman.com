@@ -1,6 +1,6 @@
 <template>
   <div class="repos">
-    <h2>Owner</h2>
+    <h2>Owner ({{ ownerRepos.length }})</h2>
 
     <ul>
         <li v-for="repo in ownerRepos" :key="repo.id" class="repo">
@@ -10,13 +10,14 @@
 
         <ul class="meta">
             <li><Icon name="clock"/> Updated {{ vagueTime(new Date(repo.updated_at)) }}</li>
+            <li v-if="repo.language"><Icon name="circle"/> {{ repo.language }}</li>
         </ul>
 
         <p v-if="repo.description">{{ repo.description }}</p>
         </li>
     </ul>
 
-    <h2>Collaborator</h2>
+    <h2>Collaborator ({{ collaboratorRepos.length }})</h2>
 
     <ul>
         <li v-for="repo in collaboratorRepos" :key="repo.id" class="repo">
@@ -26,13 +27,14 @@
 
         <ul class="meta">
             <li><Icon name="clock"/> Updated {{ vagueTime(new Date(repo.updated_at)) }}</li>
+            <li v-if="repo.language"><Icon name="circle"/> {{ repo.language }}</li>
         </ul>
 
         <p v-if="repo.description">{{ repo.description }}</p>
         </li>
     </ul>
 
-    <h2>Forked</h2>
+    <h2>Forked ({{ forkedRepos.length }})</h2>
 
     <ul>
         <li v-for="repo in forkedRepos" :key="repo.id" class="repo">
@@ -43,6 +45,7 @@
         <ul class="meta">
             <li><Icon name="code-branch"/> Forked from <a :href="repo.parent.url">{{ repo.parent.full_name }}</a></li>
             <li><Icon name="clock"/> Updated {{ vagueTime(new Date(repo.updated_at)) }}</li>
+            <li v-if="repo.language"><Icon name="circle"/> {{ repo.language }}</li>
         </ul>
 
         <p v-if="repo.description">{{ repo.description }}</p>
@@ -53,6 +56,7 @@
 </template>
 
 <script>
+import 'vue-awesome/icons/circle'
 import 'vue-awesome/icons/clock'
 import 'vue-awesome/icons/code-branch'
 import Icon from 'vue-awesome/components/Icon'
