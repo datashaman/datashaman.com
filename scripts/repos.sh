@@ -3,22 +3,40 @@
 require('dotenv').config()
 
 const async = require('async')
-const Octokit = require('@octokit/rest')
+
+const Octokit = require('@octokit/rest').plugin(
+    require('@octokit/plugin-throttling')
+)
 
 const octokit = new Octokit({
     auth: process.env.GITHUB_TOKEN,
+    throttle: {
+        onRateLimit: (retryAfter, options) => {
+            octokit.log.warn(
+                `Request quota exhausted for request ${options.method} ${options.url}`
+            )
+
+            if (options.request.retryCount === 0) {
+                console.error(`Retrying after ${retryAfter} seconds!`)
+
+                return true
+            }
+        },
+        onAbuseLimit: (retryAfter, options) => {
+            octokit.log.warn(
+                `Abuse detected for request ${options.method} ${options.url}`
+            )
+        },
+    },
 })
 
 const blacklist = process.env.GITHUB_BLACKLIST.split(',')
 
 octokit
-    .paginate(
-        'GET /user/repos',
-        {
-            affiliation: 'owner,collaborator',
-            visibility: 'public',
-        }
-    )
+    .paginate('GET /user/repos', {
+        affiliation: 'owner,collaborator',
+        visibility: 'public',
+    })
     .then(repos => {
         repos = repos.filter(repo => {
             return !repo.archived && blacklist.indexOf(repo.full_name) == -1
