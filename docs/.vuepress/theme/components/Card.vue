@@ -1,9 +1,9 @@
 <template>
-    <footer class="card h-card vcard">
+    <footer class="card h-card">
         <div class="center">
-            <a class="u-url url" href="http://www.datashaman.com">
+            <a class="u-url" rel="me" href="http://www.datashaman.com">
                 <img
-                    class="p-name fn u-photo photo"
+                    class="p-name u-photo"
                     alt="Marlin Forbes"
                     src="/images/headshot.png"
                 />
