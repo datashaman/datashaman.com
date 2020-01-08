@@ -47,6 +47,13 @@ module.exports = {
     [
       'link',
       {
+        rel: 'micropub',
+        href: 'https://micropub.datashaman.com/',
+      },
+    ],
+    [
+      'link',
+      {
         rel: 'pgpkey',
         href: '/datashaman.pgp',
         type: 'application/pgp-keys',
