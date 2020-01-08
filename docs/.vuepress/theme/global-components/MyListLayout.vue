@@ -12,11 +12,7 @@
                     }}</NavLink>
 
                     <span class="metadata">
-                        <a
-                            class="p-author h-card"
-                            href="https://www.datashaman.com"
-                            >datashaman</a
-                        >
+                        <a href="https://www.datashaman.com">datashaman</a>
                         posted
                         <a class="u-url" :href="page.path">
                             <time
