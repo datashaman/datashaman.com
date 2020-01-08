@@ -13,8 +13,9 @@
                         class="dt-published"
                         :datetime="published"
                         :title="new Date($page.frontmatter.date)"
-                        >{{ vagueTime($page.frontmatter.date) }}</time
                     >
+                        {{ vagueTime($page.frontmatter.date) }}
+                    </time>
                 </a>
             </div>
 
@@ -28,7 +29,9 @@
                     v-for="tag in $page.frontmatter.tags"
                     :key="tag"
                 >
-                    <a class="p-category" :href="'/tags/' + tag" :title="tag">#{{ tag }}</a>
+                    <a class="p-category" :href="'/tags/' + tag" :title="tag"
+                        >#{{ tag }}</a
+                    >
                 </li>
             </ul>
 

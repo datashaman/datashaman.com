@@ -187,9 +187,7 @@ module.exports = {
     [
       'sitemap',
       {
-        exclude: [
-          '/404.html',
-        ],
+        exclude: ['/404.html'],
         hostname: 'https://www.datashaman.com',
       },
     ],

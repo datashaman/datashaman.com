@@ -16,7 +16,12 @@
                     Language
                     <select v-model="language">
                         <option value="">All</option>
-                        <option v-for="language in languages" :value="language">{{ language }}</option>
+                        <option
+                            v-for="language in languages"
+                            :value="language"
+                            :key="language"
+                            >{{ language }}</option
+                        >
                     </select>
                 </li>
 
@@ -36,10 +41,19 @@
                     </h3>
 
                     <ul class="meta">
-                        <li><Icon name="clock"/> Updated {{ vagueTime(new Date(repo.updated_at)) }}</li>
-                        <li v-if="repo.language"><Icon name="circle"/> {{ repo.language }}</li>
-                        <li v-if="repo.stargazers_count"><Icon name="star"/> {{ repo.stargazers_count }}</li>
-                        <li v-if="repo.forks"><Icon name="code-branch"/> {{ repo.forks }}</li>
+                        <li>
+                            <Icon name="clock" /> Updated
+                            {{ vagueTime(new Date(repo.updated_at)) }}
+                        </li>
+                        <li v-if="repo.language">
+                            <Icon name="circle" /> {{ repo.language }}
+                        </li>
+                        <li v-if="repo.stargazers_count">
+                            <Icon name="star" /> {{ repo.stargazers_count }}
+                        </li>
+                        <li v-if="repo.forks">
+                            <Icon name="code-branch" /> {{ repo.forks }}
+                        </li>
                     </ul>
 
                     <p v-if="repo.description">{{ repo.description }}</p>
@@ -51,16 +65,29 @@
             <h2>Collaborator ({{ collaboratorRepos.length }})</h2>
 
             <ul>
-                <li v-for="repo in collaboratorRepos" :key="repo.id" class="repo">
+                <li
+                    v-for="repo in collaboratorRepos"
+                    :key="repo.id"
+                    class="repo"
+                >
                     <h3>
                         <a :href="repo.html_url">{{ repo.full_name }}</a>
                     </h3>
 
                     <ul class="meta">
-                        <li><Icon name="clock"/> Updated {{ vagueTime(new Date(repo.updated_at)) }}</li>
-                        <li v-if="repo.language"><Icon name="circle"/> {{ repo.language }}</li>
-                        <li v-if="repo.stargazers_count"><Icon name="star"/> {{ repo.stargazers_count }}</li>
-                        <li v-if="repo.forks"><Icon name="code-branch"/> {{ repo.forks }}</li>
+                        <li>
+                            <Icon name="clock" /> Updated
+                            {{ vagueTime(new Date(repo.updated_at)) }}
+                        </li>
+                        <li v-if="repo.language">
+                            <Icon name="circle" /> {{ repo.language }}
+                        </li>
+                        <li v-if="repo.stargazers_count">
+                            <Icon name="star" /> {{ repo.stargazers_count }}
+                        </li>
+                        <li v-if="repo.forks">
+                            <Icon name="code-branch" /> {{ repo.forks }}
+                        </li>
                     </ul>
 
                     <p v-if="repo.description">{{ repo.description }}</p>
@@ -78,11 +105,25 @@
                     </h3>
 
                     <ul class="meta">
-                        <li><Icon name="code-branch"/> Forked from <a :href="repo.parent.html_url">{{ repo.parent.full_name }}</a></li>
-                        <li><Icon name="clock"/> Updated {{ vagueTime(new Date(repo.updated_at)) }}</li>
-                        <li v-if="repo.language"><Icon name="circle"/> {{ repo.language }}</li>
-                        <li v-if="repo.stargazers_count"><Icon name="star"/> {{ repo.stargazers_count }}</li>
-                        <li v-if="repo.forks"><Icon name="code-branch"/> {{ repo.forks }}</li>
+                        <li>
+                            <Icon name="code-branch" /> Forked from
+                            <a :href="repo.parent.html_url">{{
+                                repo.parent.full_name
+                            }}</a>
+                        </li>
+                        <li>
+                            <Icon name="clock" /> Updated
+                            {{ vagueTime(new Date(repo.updated_at)) }}
+                        </li>
+                        <li v-if="repo.language">
+                            <Icon name="circle" /> {{ repo.language }}
+                        </li>
+                        <li v-if="repo.stargazers_count">
+                            <Icon name="star" /> {{ repo.stargazers_count }}
+                        </li>
+                        <li v-if="repo.forks">
+                            <Icon name="code-branch" /> {{ repo.forks }}
+                        </li>
                     </ul>
 
                     <p v-if="repo.description">{{ repo.description }}</p>
@@ -106,12 +147,12 @@ export default {
         Icon,
     },
     computed: {
-        collaboratorRepos () {
+        collaboratorRepos() {
             return this.filteredRepos.filter(repo => {
                 return repo.owner.login !== 'datashaman' && !repo.fork
             })
         },
-        filteredRepos () {
+        filteredRepos() {
             return this.repos.filter(repo => {
                 let cond = true
 
@@ -139,34 +180,28 @@ export default {
                 return cond
             })
         },
-        forksRepos () {
+        forksRepos() {
             return this.filteredRepos.filter(repo => {
                 return repo.fork
             })
         },
-        languages () {
-            let languages = this.repos
-                .reduce(
-                    (acc, repo) => {
-                        let language = repo.language || 'Unknown'
-                        acc[language] = true
+        languages() {
+            let languages = this.repos.reduce((acc, repo) => {
+                let language = repo.language || 'Unknown'
+                acc[language] = true
 
-                        return acc
-                    },
-                    {}
-                )
+                return acc
+            }, {})
 
-            return Object
-                .keys(languages)
-                .sort()
+            return Object.keys(languages).sort()
         },
-        ownerRepos () {
+        ownerRepos() {
             return this.filteredRepos.filter(repo => {
                 return repo.owner.login === 'datashaman' && !repo.fork
             })
         },
     },
-    data () {
+    data() {
         const repos = require('../data/repos.json')
 
         return {
@@ -176,10 +211,10 @@ export default {
         }
     },
     methods: {
-        reset () {
+        reset() {
             this.type = this.language = ''
         },
-        vagueTime (dt) {
+        vagueTime(dt) {
             return vagueTime.get({
                 to: dt,
             })
