@@ -1,6 +1,8 @@
 <template>
     <div id="vuperess-theme-blog__post-layout">
         <div class="h-entry vuepress-blog-theme-content">
+            <h1 class="p-name">{{ $page.frontmatter.title }}</h1>
+
             <div class="metadata">
                 <a class="p-author h-card" href="https://www.datashaman.com"
                     >datashaman</a

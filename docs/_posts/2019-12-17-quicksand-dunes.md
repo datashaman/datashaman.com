@@ -8,8 +8,6 @@ tags:
 description: "Wherein I tackle my first improv writing task. Select a topic at random and write for 5m starting each sentence with, \"Yes, let's!\""
 summary: "Wherein I tackle my first improv writing task. Select a topic at random and write for 5m starting each sentence with, \"Yes, let's!\""
 ---
-# Quicksand Dunes
-
 <p class="p-summary">
     {{ $page.frontmatter.summary }}
 </p>
