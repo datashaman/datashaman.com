@@ -9,7 +9,7 @@ const Octokit = require('@octokit/rest').plugin(
 )
 
 const octokit = new Octokit({
-    auth: process.env.GITHUB_TOKEN,
+    auth: process.env.PERSONAL_TOKEN,
     throttle: {
         onRateLimit: (retryAfter, options) => {
             octokit.log.warn(
@@ -30,7 +30,9 @@ const octokit = new Octokit({
     },
 })
 
-const blacklist = process.env.GITHUB_BLACKLIST.split(',')
+const blacklist = process.env.GITHUB_BLACKLIST
+    ? process.env.GITHUB_BLACKLIST.split(',')
+    : []
 
 octokit
     .paginate('GET /user/repos', {
