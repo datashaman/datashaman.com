@@ -41,7 +41,7 @@
     "docs:dev": "vuepress dev docs",
     "fix": "eslint --fix --ext .js,.vue docs/.vuepress",
     "lint": "eslint --ext .js,.vue docs/.vuepress",
-    "pretest": "yarn lint",
+    "pretest": "npm run lint",
     "repos": "scripts/repos.sh > docs/.vuepress/data/repos.json"
   },
   "repository": {
