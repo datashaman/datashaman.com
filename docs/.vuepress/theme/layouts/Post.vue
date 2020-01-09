@@ -3,6 +3,10 @@
         <div class="h-entry vuepress-blog-theme-content">
             <h1 class="p-name">{{ $page.frontmatter.title }}</h1>
 
+            <div v-if="$page.frontmatter.photo" class="u-photo">
+                <img :src="$page.frontmatter.photo"/>
+            </div>
+
             <div class="metadata">
                 <a class="p-author h-card" href="https://www.datashaman.com"
                     >datashaman</a
