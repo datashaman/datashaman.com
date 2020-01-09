@@ -29,7 +29,7 @@
                     v-for="tag in $page.frontmatter.tags"
                     :key="tag"
                 >
-                    <a class="p-category" :href="'/tags/' + tag" :title="tag"
+                    <a class="p-category" :href="'/tags/' + tag + '/'" :title="tag"
                         >#{{ tag }}</a
                     >
                 </li>
