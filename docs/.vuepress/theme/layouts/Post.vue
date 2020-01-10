@@ -3,8 +3,8 @@
         <div class="h-entry vuepress-blog-theme-content">
             <h1 class="p-name">{{ $page.frontmatter.title }}</h1>
 
-            <div v-if="$page.frontmatter.photo" class="u-photo">
-                <img :src="$page.frontmatter.photo"/>
+            <div v-if="$page.frontmatter.photos" class="photos">
+                <img v-for="photo in $page.frontmatter.photos" :key="photo.value" :src="photo.value" :alt="photo.alt"/>
             </div>
 
             <div class="metadata">
