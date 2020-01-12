@@ -8,7 +8,7 @@
             </div>
 
             <div class="metadata">
-                <a class="p-author h-card" href="https://www.datashaman.com"
+                <a class="p-author h-card" href="https://datashaman.com"
                     >datashaman</a
                 >
                 posted

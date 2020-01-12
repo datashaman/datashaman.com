@@ -20,14 +20,14 @@ module.exports = {
       'link',
       {
         rel: 'pingback',
-        href: 'https://webmention.io/www.datashaman.com/xmlrpc',
+        href: 'https://webmention.io/datashaman.com/xmlrpc',
       },
     ],
     [
       'link',
       {
         rel: 'webmention',
-        href: 'https://webmention.io/www.datashaman.com/webmention',
+        href: 'https://webmention.io/datashaman.com/webmention',
       },
     ],
     [
@@ -188,14 +188,14 @@ module.exports = {
     [
       'feed',
       {
-        canonical_base: 'https://www.datashaman.com',
+        canonical_base: 'https://datashaman.com',
       },
     ],
     [
       'sitemap',
       {
         exclude: ['/404.html'],
-        hostname: 'https://www.datashaman.com',
+        hostname: 'https://datashaman.com',
       },
     ],
   ],

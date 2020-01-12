@@ -1,7 +1,7 @@
 <template>
     <footer class="card h-card">
         <div class="center">
-            <a class="u-url" rel="me" href="https://www.datashaman.com">
+            <a class="u-url" rel="me" href="https://datashaman.com">
                 <img
                     class="p-name u-photo"
                     alt="Marlin Forbes"

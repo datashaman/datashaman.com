@@ -1,1 +1,1 @@
-# www.datashaman.com
+# datashaman.com

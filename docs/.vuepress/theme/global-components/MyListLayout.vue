@@ -12,7 +12,7 @@
                     }}</NavLink>
 
                     <span class="metadata">
-                        <a href="https://www.datashaman.com">datashaman</a>
+                        <a href="https://datashaman.com">datashaman</a>
                         posted
                         <a class="u-url" :href="page.path">
                             <time
