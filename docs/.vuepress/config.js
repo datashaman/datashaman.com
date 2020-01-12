@@ -48,7 +48,7 @@ module.exports = {
       'link',
       {
         rel: 'micropub',
-        href: 'https://micropub.datashaman.com/micropub',
+        href: 'https://micropub.datashaman.com',
       },
     ],
     [
