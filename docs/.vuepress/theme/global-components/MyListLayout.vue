@@ -26,8 +26,7 @@
                 </h1>
 
                 <div class="p-summary">
-                    {{ page.frontmatter.summary || page.summary }}
-                    <!-- <Content :page-key="page.key" slot-key="intro"/>-->
+                    <template v-if="page.frontmatter.summary">{{ page.frontmatter.summary }}</template>
                 </div>
 
                 <ul class="tags" v-if="page.frontmatter.tags">
