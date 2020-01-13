@@ -101,6 +101,20 @@ module.exports = {
       },
     ],
     [
+      'link',
+      {
+        rel: 'code-repository',
+        href: 'https://github.com/datashaman/micropub',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'content-repository',
+        href: 'https://github.com/datashaman/datashaman.com',
+      },
+    ],
+    [
       'meta',
       {
         name: 'msapplication-TileColor',
