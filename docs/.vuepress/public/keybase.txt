@@ -4,7 +4,7 @@ https://keybase.io/datashaman
 
 I hereby claim:
 
-  * I am an admin of https://www.datashaman.com
+  * I am an admin of https://datashaman.com
   * I am datashaman (https://keybase.io/datashaman) on keybase.
   * I have a public key with fingerprint FEF0 409F A006 4A12 8508  BD5C 5AE8 6373 A31F 965D
 
@@ -21,17 +21,27 @@ To do so, I am signing this object:
       "uid": "0ac9ec05665b83bdc9721efe81267219",
       "username": "datashaman"
     },
+    "merkle_root": {
+      "ctime": 1578890201,
+      "hash_meta": "44afecf40d8e7e01f39110015f1f969f4653e53250b8a0da9fb221fc0955b3a2",
+      "seqno": 14200454
+    },
+    "revoke": {
+      "sig_ids": [
+        "ec508ef6fce816ed21ea25c6b16931cd7e091842e57f11c66cdc8ffd4fdf86ca0f"
+      ]
+    },
     "service": {
-      "hostname": "www.datashaman.com",
+      "hostname": "datashaman.com",
       "protocol": "https:"
     },
     "type": "web_service_binding",
     "version": 1
   },
-  "ctime": 1578316399,
+  "ctime": 1578890207,
   "expire_in": 157680000,
-  "prev": "17dfee2f8d5efd70a32a27094d442eb3b8388f1ef5239e7eee1eb67cc9b93615",
-  "seqno": 36,
+  "prev": "7fc74929d388f5913a86f648f67c4454292296f97fa4f365d8f845ae9ef04434",
+  "seqno": 40,
   "tag": "signature"
 }
 
@@ -39,25 +49,27 @@ which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
 
-owFtUltsFUUYPqfUYqsQWqsYCZCuRkCaOpfd2ZkTiNWQeCEYo40pBDnM7Pzbbtru
-np5dekBs0oiKxaQxqAdEkjYh3trES9QQE2okigFqa8ILpIkXfLE9LzVVIyaIzhYa
-X5yXmfnn+77/+/7Mq8uWZOqyO2a8+MTa8jPZiVmV2XUbKe23VKT3Wbn9VhcsbNCt
-IU7yXYG2chbCBDlMug5yPSIQAmW7PtMau9wFBoja5sXBrqM9RB2CpBa2wFwB9x0k
-MVOK+EhazZYfhB1QLBSDMDGyPvjIRsKXCDFbYsIdxJV2PEcCZ9SlkmJfMEcbYmcU
-pwxjTskYWoLI1Mwlv2Dvf/CLvhF2OJNGVTBbMGRc+ARzih3NtC2oZkA49pixaLpj
-6lGtKAVNXYU5UI7ldd97rstJT4BnJsEcxanSnnAJBh84JsycRAqMoRjKHjBoLRMZ
-d8oeGVr9zZap9wUepKNNs9zAlEqllv9wLV7UYzQKxSiJvKjbvHcmSSHOpfxkX2GB
-ACp/QyqvglCbeRpGHxTjIAqtHDZILwlSbey4JiejQjRbsLcQFCEfhAtlxpFZaR/o
-s3LSwq72AYjPtQO+dpGkRBIXCVvbNgFFTVbOfRPUIVSACwAYFHM9TyhBGXasNF1v
-GFk5yoxR2WF8xkFHKJM9RbD66waztDqTrcusvqOp+tqvrcMjNY81vHjz+M7FT3hT
-VfoDM3W1KxYrk2eWXrv35JO3/3z46unlA8Nt38+iAxfGx6feqH1zXeXsh0O9Z698
-8cm5dx84+c5oac1079SO4w32XwNPPFKpzFXmz9e/1FiVWfXQ5qHeg9M/zqyZG1zy
-+tj5D+45VXvqYv22u6a/nPv92XNj61ZufH7r7qb3Rr5d2n7p0M5XvlqbmT/d2jj6
-spwdWb6hPqhZX83jmszu57a/8DY5tnU7wZvqa7NHfhrbe+KXy48fb3lt2eRH67uu
-2p/dPTG4oq38z5ZHf1h96ej8RFlVtR/J3fd+6+TFg1cujH597M/2xuqBpspvh+7c
-tbLhm7cOPLXl46cf/px8d2bz5anyg4fb+obKf2xin/rFv4f9Vd3bbrl/Jslt7N9w
-678=
-=46r9
+owFtU31oVlUcfjddrRdaTWKFGtaV7MMh59zzcc+ZRivaCotlayu/X849H9vtfd97
+3917nYq9a1pSEzPLWoQNJQ1jtT9CkoolfsD2R4VRBKEQQVAaCo4KhUA7dzaC6v5z
+7z3n+T3P83vO7+y+cVYuX7P6rEwOLBheV/PFOT+3ft5vZ7c4fqQ2Oy1bnKKefumS
+0klaKAbKaXEAdAGhwiPAky4HQPvYM1Qp6DFPUw0QtjsEekRJgIgLhOKYQ+ZrZggQ
+kPq+a4Bwmh0ThD06rsRBmFpaow3AgBsBAMUCuowA5isiidCMIg8JBA2nRNnC3ijJ
+Kqw5XyR6SRDZNftTmLb3P/gZ3wASRoVl5RRzCqwL40KGIFFUYY4U1S6DklqLVh0i
+iZSPkFbI8yHTiEFxzfeGa3RCci1tEpT4DPlKcs+F2mgGXWq/eAZMdByKsrZoJVKR
+9IqyCJ1qs1PWcbGkC3EUpVm8Mg0yECQeYxy4ANoWLbpQ1qmwtRgLo6XBQDHtaQAN
+4hAC24zJOuQGU4I0QS4BPhNACW5814VGAk6Ij4RrnSS6L4ysAnYBwARbC7Huj4o6
+U0+CHptc4rSscfSx56SNXRtqpG2EamVbEi6R1IeUIyiV1bdniV1NPANtVlQqyYxR
+2CjDqBTAOOuqmV7cH8hp+uyw/hPCEhmVra1KHKWRjEp2rzdNK0lLFk66uZKBN2q/
+8DdNwQ9CZYfFVvTrOAmi0LZikf/OzWt29KZKEOtCEE4vUwbsk+nofkvpGelh7nKF
+mJ1FDpFg1FDMDPUktrG43HU5NdwzAhtkZ4cZhu088Ww0McL/BIktaSp6LKdNLxTp
+hlg71fxQDZqdq8nnbm+6c/aVi6379l+3fM72+s/XzlywutrsduXyN9w8s1JqrM8d
+enl0d8O5B7ff8VPnQ0+3lZ7f8cr1+v2hscfXrpjqL349/snEvrfLp+d8f/L1kY9e
+Wrxq0b1Hjq0+uax39NKJWVNR9PuXS28Zudr11eCAd/nizrGlnY9c2Fra0zgZf7un
+bdmLIwMv7HryzHDDu7XR+Nwjo6caDx6umzj/Z7c3flv7wPEf5+cHXzvatoC3fjY5
+N9zV8d2pyU3t7d88tvDNNfOu/PHhiuqnb7VcGj787Pqd1TcOfbDtno/ve+CJZ6bu
+uvDzU8X246FZvLzj0ZWvPnzm16a9XqsePX/5nR+6Tg+ajcWjJ7q6787XVJrSzoM3
+1feV7m+Yv2psb8fwgdpti7pv3XF14f5f+qoD79WNTKzc6g/hvwA=
+=1F+I
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
