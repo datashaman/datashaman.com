@@ -198,5 +198,11 @@ module.exports = {
         hostname: 'https://datashaman.com',
       },
     ],
+    [
+      'minimal-analytics',
+      {
+        ga: 'UA-27952346-1',
+      },
+    ],
   ],
 }

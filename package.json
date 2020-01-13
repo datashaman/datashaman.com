@@ -32,6 +32,7 @@
     "raw-loader": "^4.0.0",
     "vuepress": "^1.2.0",
     "vuepress-plugin-feed": "^0.1.8",
+    "vuepress-plugin-minimal-analytics": "^0.1.4",
     "vuepress-plugin-sitemap": "^2.3.1",
     "webpack": "^4.0.0 || ^5.0.0"
   },
