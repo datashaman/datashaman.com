@@ -1,7 +1,7 @@
 {
     "name": "datashaman/datashaman.com",
-    "description": "Source for datashaman.cm",
     "type": "project",
+    "description": "Source for datashaman.cm",
     "license": "MIT",
     "authors": [
         {
@@ -10,18 +10,66 @@
         }
     ],
     "require": {
-        "datashaman/tongs-feed": "0.3.*",
-        "datashaman/tongs-metadata": "0.3.*",
-        "datashaman/tongs-more": "0.3.*",
-        "datashaman/tongs-permalinks": "0.3.*"
+        "datashaman/tongs": "@dev",
+        "datashaman/tongs-feed": "@dev",
+        "datashaman/tongs-metadata": "@dev",
+        "datashaman/tongs-more": "@dev",
+        "datashaman/tongs-permalinks": "@dev"
     },
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "extra": {
+        "tongs": {
+            "plugins": {
+                "tap": "Datashaman\\Tongs\\Plugins\\TapPlugin"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Datashaman\\Tongs\\Plugins\\": "plugins"
+        }
+    },
+    "repositories": {
+        "tongs": {
+            "type": "path",
+            "url": "../tongs/tongs",
+            "options": {
+                "symlink": true
+            }
+        },
+        "tongs-feed": {
+            "type": "path",
+            "url": "../tongs/feed",
+            "options": {
+                "symlink": true
+            }
+        },
+        "tongs-metadata": {
+            "type": "path",
+            "url": "../tongs/metadata",
+            "options": {
+                "symlink": true
+            }
+        },
+        "tongs-more": {
+            "type": "path",
+            "url": "../tongs/more",
+            "options": {
+                "symlink": true
+            }
+        },
+        "tongs-permalinks": {
+            "type": "path",
+            "url": "../tongs/permalinks",
+            "options": {
+                "symlink": true
+            }
+        }
+    },
     "minimum-stability": "dev",
-    "require-dev": {
-        "datashaman/tongs": "0.3.*"
-    }
+    "prefer-stable": true
 }
