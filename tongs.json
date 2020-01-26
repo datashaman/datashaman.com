@@ -1,0 +1,28 @@
+{
+    "metadata": {
+    },
+    "plugins": {
+        "markdown": true,
+        "more": true,
+        "permalinks": {
+            "pattern": "posts/:date-:title/"
+        },
+        "collections": {
+            "posts": "//"
+        },
+        "feed": {
+            "collection" : "posts",
+            "feed": {
+                "title": "datashaman",
+                "link": "https://datashaman.com/"
+            }
+        },
+        "sass": true,
+        "views": {
+            "paths": [
+                "views"
+            ],
+            "compiled": ".cache"
+        }
+    }
+}

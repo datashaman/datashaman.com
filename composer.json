@@ -9,7 +9,12 @@
             "email": "marlinf@datashaman.com"
         }
     ],
-    "require": {},
+    "require": {
+        "datashaman/tongs-feed": "0.3.*",
+        "datashaman/tongs-metadata": "0.3.*",
+        "datashaman/tongs-more": "0.3.*",
+        "datashaman/tongs-permalinks": "0.3.*"
+    },
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",

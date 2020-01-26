@@ -1,16 +1,13 @@
 ---
 title: Quicksand Dunes
-date: 2019-12-17 14:51
-type: post
+date: 2019-12-17 14:51:00
+view: post
 tags:
     - improv
     - writing
-description: "Wherein I tackle my first improv writing task. Select a topic at random and write for 5m starting each sentence with, \"Yes, let's!\""
-summary: "Wherein I tackle my first improv writing task. Select a topic at random and write for 5m starting each sentence with, \"Yes, let's!\""
 ---
-<p class="p-summary">
-    {{ $page.frontmatter.summary }}
-</p>
+<p>Wherein I tackle my first improv writing task. Select a topic at random and write for 5m starting each sentence with, "Yes, let's!""</p>
+<!--more-->
 
 <p>Yes, let's travel to the Quicksand Dunes, the legendary deathtrap that lies in wait for unwary travellers!</p>
 
