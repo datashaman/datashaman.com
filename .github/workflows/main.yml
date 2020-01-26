@@ -1,47 +1,54 @@
-name: github pages
+name: Build
 
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
-  build-deploy:
-    runs-on: ubuntu-18.04
+  build:
+
+    runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v1
+        with:
+          php-version: '7.3'
 
-    - name: Cache dependencies
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+      - name: Get Composer cache directory
+        id: composer-cache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
 
-    - name: Install dependencies
-      run: npm install
+      - name: Cache Composer dependencies
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          # Use composer.json for key, if composer.lock is not committed.
+          # key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
 
-    - name: Generate repos data
-      run: npm run repos
-      env:
-        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+      - name: Install Composer dependencies
+        run: |
+          composer install \
+            --no-progress \
+            --no-suggest \
+            --prefer-dist \
+            --optimize-autoloader
 
-    - name: Build dist
-      run: npm run docs:build
+      - name: Build static site
+        run: |
+          vendor/bin/tongs
 
-    - name: Deploy
-      uses: jakejarvis/s3-sync-action@master
-      with:
-        args: --acl public-read --follow-symlinks --delete
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'eu-west-1'
-        SOURCE_DIR: 'docs/.vuepress/dist'
+      - name: Deploy to GitHub Pages
+        uses: docker://peaceiris/gh-pages:v2
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./build
