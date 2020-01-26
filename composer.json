@@ -1,0 +1,23 @@
+{
+    "name": "datashaman/datashaman.com",
+    "description": "Source for datashaman.cm",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marlin Forbes",
+            "email": "marlinf@datashaman.com"
+        }
+    ],
+    "require": {},
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "datashaman/tongs": "0.3.*"
+    }
+}
