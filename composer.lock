@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94f035a309c409b5dd0cb69bcfc970ba",
+    "content-hash": "1e23a344c9ac0e6e71666f2ed032aedc",
     "packages": [
         {
             "name": "datashaman/tongs-feed",
@@ -2962,7 +2962,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": [],
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
