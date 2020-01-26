@@ -1,3 +1,12 @@
-body {
-    font-family: sans-serif;
+@import "../../node_modules/purecss/build/pure";
+
+main {
+  max-width: 70ch;
+  padding: 2ch;
+  margin: auto;
+}
+
+.view-home h2,
+.view-post h2 {
+  margin-top: 0;
 }

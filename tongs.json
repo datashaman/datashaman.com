@@ -1,5 +1,9 @@
 {
     "metadata": {
+        "site": {
+            "title": "datashaman",
+            "link": "https://datashaman.com"
+        }
     },
     "plugins": {
         "markdown": true,

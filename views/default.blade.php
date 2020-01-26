@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        @if(@$title){{ $title }} - @endif{{ $site['title'] }}
+    </title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
-<body>
-    <div class="container">
+<body class="view-{{ $view }}">
+    <main>
         @yield('content')
-    </div>
+    </main>
 </body>
 </html>

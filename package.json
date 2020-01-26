@@ -1,0 +1,20 @@
+{
+  "name": "datashaman.com",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datashaman/datashaman.com.git"
+  },
+  "keywords": [],
+  "author": "Marlin Forbes <marlinf@datashaman.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/datashaman/datashaman.com/issues"
+  },
+  "homepage": "https://github.com/datashaman/datashaman.com#readme",
+  "devDependencies": {
+    "purecss": "^1.0.1"
+  }
+}
