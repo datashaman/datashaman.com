@@ -15,6 +15,7 @@
   },
   "homepage": "https://github.com/datashaman/datashaman.com#readme",
   "devDependencies": {
-    "purecss": "^1.0.1"
+    "purecss": "^1.0.1",
+    "water.css": "github:kognise/water.css#master"
   }
 }

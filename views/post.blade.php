@@ -5,21 +5,26 @@
     <div class="pure-u-1-4">
     </div>
     <div class="pure-u-3-4">
-        <h1>{{ $site['title'] }}</h1>
+        <h1>
+            <a href="{{ $site['link'] }}">
+                {{ $site['title'] }}
+            </a>
+        </h1>
     </div>
 </div>
 
 <article class="pure-g">
     <div class="pure-u-1-4">
-        {{ $date->format('M D, H:i') }}
+        <a href="{{ $site['link'] }}">
+            <time>{{ $date->format('M j H:i') }}</time>
+        </a>
     </div>
     <div class="pure-u-3-4">
-        <h2>
+        <h3>
             <a href="{{ $path }}">{{ $title }}</a>
-        </h2>
+        </h3>
 
-        {!! $excerpt ?? $contents !!}
-        @if(@$excerpt)<a href="{{ $path }}">more</a>@endif
+        {!! $contents !!}
     </div>
 </article>
 @endsection

@@ -8,7 +8,7 @@
     </title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
-<body class="view-{{ $view }}">
+<body class="view--{{ $view }}">
     <main>
         @yield('content')
     </main>

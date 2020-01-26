@@ -1,4 +1,5 @@
-@import "../../node_modules/purecss/build/pure";
+@import "../../node_modules/water.css/dist/light";
+@import "../../node_modules/purecss/build/grids";
 
 main {
   max-width: 70ch;
@@ -6,7 +7,21 @@ main {
   margin: auto;
 }
 
-.view-home h2,
-.view-post h2 {
+.view--home h3,
+.view--post h3
+{
   margin-top: 0;
+}
+
+.view--home article
+{
+    margin-bottom: 20px;
+}
+
+.view--home article time,
+.view--post article time
+{
+    position: relative;
+    top: 3px;
+    text-align: right;
 }
