@@ -13,7 +13,7 @@
     <article class="pure-g">
         <div class="pure-u-1-4">
             <a href="{{ $site['link'] }}">
-                <time>{{ $post['date']->format('M j H:i') }}</time>
+                <time>{{ $post['date']->format('Y M j H:i') }}</time>
             </a>
         </div>
         <div class="pure-u-3-4">

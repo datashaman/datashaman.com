@@ -6,7 +6,7 @@
         }
     },
     "plugins": {
-        "markdown": true,
+        "textFormatter": true,
         "more": true,
         "permalinks": {
             "pattern": "posts/:date-:title/"

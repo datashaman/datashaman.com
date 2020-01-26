@@ -24,7 +24,8 @@
     "extra": {
         "tongs": {
             "plugins": {
-                "tap": "Datashaman\\Tongs\\Plugins\\TapPlugin"
+                "tap": "Datashaman\\Tongs\\Plugins\\TapPlugin",
+                "textFormatter": "Datashaman\\Tongs\\Plugins\\TextFormatterPlugin"
             }
         }
     },
@@ -71,5 +72,8 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "require-dev": {
+        "s9e/text-formatter": "^2.3"
+    }
 }
