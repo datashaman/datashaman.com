@@ -14,7 +14,8 @@
         "datashaman/tongs-feed": "@dev",
         "datashaman/tongs-metadata": "@dev",
         "datashaman/tongs-more": "@dev",
-        "datashaman/tongs-permalinks": "@dev"
+        "datashaman/tongs-permalinks": "@dev",
+        "datashaman/tongs-sass": "0.3.*"
     },
     "config": {
         "optimize-autoloader": true,
@@ -24,7 +25,6 @@
     "extra": {
         "tongs": {
             "plugins": {
-                "tap": "Datashaman\\Tongs\\Plugins\\TapPlugin",
                 "textFormatter": "Datashaman\\Tongs\\Plugins\\TextFormatterPlugin"
             }
         }
@@ -66,6 +66,13 @@
         "tongs-permalinks": {
             "type": "path",
             "url": "../tongs/permalinks",
+            "options": {
+                "symlink": true
+            }
+        },
+        "tongs-sass": {
+            "type": "path",
+            "url": "../tongs/sass",
             "options": {
                 "symlink": true
             }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27e731934df23643015d5e8d1840d59e",
+    "content-hash": "1ce2b385c7a1b10ba4cf1728a492ca78",
     "packages": [
         {
             "name": "datashaman/tongs",
@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "../tongs/tongs",
-                "reference": "e7b45942a57fafa4833ef2090c208fb3ae7d8a68"
+                "reference": "f794715795c02d710ec23b465993840173e17120"
             },
             "require": {
                 "erusev/parsedown": "^1.7",
@@ -40,8 +40,8 @@
                         "collections": "Datashaman\\Tongs\\Plugins\\CollectionsPlugin",
                         "drafts": "Datashaman\\Tongs\\Plugins\\DraftsPlugin",
                         "markdown": "Datashaman\\Tongs\\Plugins\\MarkdownPlugin",
-                        "sass": "Datashaman\\Tongs\\Plugins\\SassPlugin",
                         "serve": "Datashaman\\Tongs\\Plugins\\ServePlugin",
+                        "tap": "Datashaman\\Tongs\\Plugins\\TapPlugin",
                         "views": "Datashaman\\Tongs\\Plugins\\ViewsPlugin"
                     }
                 }
@@ -263,7 +263,7 @@
             "dist": {
                 "type": "path",
                 "url": "../tongs/permalinks",
-                "reference": "3f7aa3abb5082dee1373cfe953bb39005b57b372"
+                "reference": "b55fa09d82144d915572ed70449727a1245416d0"
             },
             "require-dev": {
                 "datashaman/tongs": "0.3.*",
@@ -308,6 +308,58 @@
             "transport-options": {
                 "symlink": true
             }
+        },
+        {
+            "name": "datashaman/tongs-sass",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/datashaman/tongs-sass.git",
+                "reference": "5d0f41d3b7d612d94502454345214bbdfac90fe7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/datashaman/tongs-sass/zipball/5d0f41d3b7d612d94502454345214bbdfac90fe7",
+                "reference": "5d0f41d3b7d612d94502454345214bbdfac90fe7",
+                "shasum": ""
+            },
+            "require-dev": {
+                "datashaman/tongs": "@dev",
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "library",
+            "extra": {
+                "tongs": {
+                    "plugins": {
+                        "sass": "Datashaman\\Tongs\\Plugins\\SassPlugin"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Datashaman\\Tongs\\Plugins\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marlin Forbes",
+                    "email": "marlinf@datashaman.com"
+                }
+            ],
+            "description": "Sass plugin for Tongs",
+            "keywords": [
+                "laravel",
+                "ssg",
+                "static-site",
+                "static-site-generator",
+                "tongs",
+                "tongs-plugin"
+            ],
+            "time": "2020-01-27T17:12:24+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1215,16 +1267,16 @@
         },
         {
             "name": "laravel-zero/foundation",
-            "version": "v6.10.0",
+            "version": "v6.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-zero/foundation.git",
-                "reference": "0094f5017f56cbd392e8bf85b48d098a692eb900"
+                "reference": "894a9876d48f7bd36d8a7038fcf9559e89854ff3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-zero/foundation/zipball/0094f5017f56cbd392e8bf85b48d098a692eb900",
-                "reference": "0094f5017f56cbd392e8bf85b48d098a692eb900",
+                "url": "https://api.github.com/repos/laravel-zero/foundation/zipball/894a9876d48f7bd36d8a7038fcf9559e89854ff3",
+                "reference": "894a9876d48f7bd36d8a7038fcf9559e89854ff3",
                 "shasum": ""
             },
             "require": {
@@ -1251,7 +1303,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-01-12T18:12:56+00:00"
+            "time": "2020-01-27T12:21:43+00:00"
         },
         {
             "name": "laravel-zero/framework",

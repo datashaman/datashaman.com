@@ -10,6 +10,14 @@
 </head>
 <body class="view--{{ $view }}">
     <main>
+        <div class="pure-g">
+            <div class="pure-u-1-4">
+            </div>
+            <div class="pure-u-3-4">
+                <h1>{{ $site['title'] }}</h1>
+            </div>
+        </div>
+
         @yield('content')
     </main>
 </body>
