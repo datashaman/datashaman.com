@@ -23,7 +23,17 @@
 
             {!! $post['excerpt'] ?? $post['contents'] !!}
 
-            @if(@$post['excerpt'])<a href="{{ $post['path'] }}">more</a>@endif
+            @isset($post['excerpt'])<a href="{{ $post['path'] }}">more</a>@endisset
+
+            @isset($post['tags'])
+            <div class="tags">
+                <ul>
+                @foreach($post['tags'] as $tag)
+                <li><a href="/tags/{{ $tag }}/">#{{ $tag }}</a></li>
+                @endforeach
+                </ul>
+            </div>
+            @endisset
         </div>
     </article>
     @endforeach
